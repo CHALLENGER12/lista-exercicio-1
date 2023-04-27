@@ -1,0 +1,244 @@
+import java.util.Scanner; // Exercício 1
+public class Exerciciod{
+  public static void main(String[] arg){
+    System.out.println("Média Aritmética");
+    Scanner scanner = new Scanner(System.in);
+      
+    System.out.println("\nInforme o primeiro número: ");
+    double numeroUm = scanner.nextDouble();
+      
+    System.out.println("\nInforme o segundo número: ");
+    double numeroDois = scanner.nextDouble();
+      
+    double resultado = (numeroUm + numeroDois) / 2;
+      
+    System.out.println("\nO resultado da média aritimética é: %.2f %n ", (resultado));
+
+    System.out.println("\nFim do progrma!");
+      
+    scanner.close();
+  }
+}
+import java.util.Scanner; // Exercício 2
+public class Exerciciod{
+  public static void main(String[] arg){
+    System.out.println("Produto acrescido de 10%");
+    Scanner scanner = new Scanner(System.in);
+      
+    System.out.println("\nInforme o valor do produto: ");
+    double valorUm = scanner.nextDouble();
+      
+    double resultado = ((valorUm * 10)/100) + valorUm;
+
+    System.out.printf("\nO novo valor do produto é: R$ %.2f %n ", (resultado));
+
+    System.out.println("\nFim do programa!");
+      
+    scanner.close();
+    }
+}
+import java.util.Scanner; //Exercicio 3
+public class Atividade{
+  public static void main(String[] args){
+    System.out.println("Programa de conversão de °F para °C");     
+    
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("\nInforme a temperatura em °F: ");
+   
+    double grausf = scanner.nextDouble();
+    double numerador = grausf - 32;
+    double resultado = numerador / 1.8;
+   
+    System.out.printf("\nResultado da conversão é: %.2f °C %n ", (resultado));
+
+    System.out.println("\nFim do programa!");
+ 
+    scanner.close();
+  }
+}
+import java.util.Scanner; // Exercicio 4
+public class Atividade{
+  public static void main(String[] args){
+    System.out.println("Programa para o cálculo de juros compostos");
+      
+    Scanner scanner = new Scanner(System.in);
+  
+    System.out.println("\nInforme o valor do capital a ser aplicado: ");
+    double capital = scanner.nextDouble();
+    
+    System.out.println("Informe o prazo de aplicação (em meses): ");
+    double prazo = scanner.nextDouble();
+
+    System.out.println("Informe a taxa de juros mensal: ");
+    double taxaUm = scanner.nextDouble();
+    
+    double taxa = taxaUm / 100;
+    double montante = capital * (Math.pow((1 + taxa), prazo));
+    double valort = (double) capital + montante;
+    
+    System.out.printf("Valor total recebido: R$ %.2f %n", (valort)) ;
+
+    System.out.println("\nFim do programa!");
+    
+    scanner.close();
+  }
+}
+import java.util.Scanner; // Exercicio 5
+public class Exercicio{
+  public static void main(String[] arg){
+    System.out.println("Programa para calcular o salário bruto");
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.println("\nInforme o número de horas trabalhadas: ");
+    double horas = scanner.nextDouble();
+
+    System.out.println("\nInforme o valor recebido por hora: ");
+    double valor = scanner.nextDouble();
+
+    System.out.println("\nInforme o número de dias trabalhados: ");
+    double diastrab = scanner.nextDouble();
+
+    System.out.println("\nInforme o valor do salário família: ");
+    double familia = scanner.nextDouble();
+
+    System.out.println("\nInforme o número de filhos menores de 14 anos: ");
+    double filhos = scanner.nextDouble();
+
+    double salario = horas * valor;
+    double salariomes = salario * diastrab;
+    double salariofam = filhos * familia;
+    double salariobru = salariofam + salariomes;
+
+    System.out.printf("\nSalário bruto no mês: R$ %.2f %n", (salariobru));
+    
+    System.out.println("\nFim do programa!");
+
+    scanner.close();
+  }
+}
+import java.util.Scanner; // Exercicio 6
+public class Atividade{
+  public static void main(String[] arg){
+    System.out.println("Programa para calcular logaritmo");
+    
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("\nInforme o primeiro número (logaritmando): ");
+    double numeroUm = scanner.nextDouble();
+
+    System.out.println("\nInforme o segundo número (Base): ");
+    double numeroDois = scanner.nextDouble();
+
+    double resultado = (Math.log(numeroUm)) / (Math.log(numeroDois));
+    
+    System.out.printf("\nO resultado do cálculo é: %.2f %n", (resultado));
+
+    System.out.println("\nFim do programa!");
+
+    scanner.close();
+  }
+}
+import java.util.Scanner; // Exercício 7
+public class Atividade{
+    public static void main(String[] args){;
+
+    System.out.println("Programa para calcular o salário de um vendedor");
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("\nInforme o salario fixo: ");
+    double fixo = scanner.nextDouble();
+
+    System.out.println("\nInforme o valor total arrecadado das vendas realizadas no mês: ");
+    double total = scanner.nextDouble();
+
+    System.out.println("\nInforme o percentual ganho sobre o total das vendas: ");
+    double percentual = scanner.nextDouble();
+
+    double vendas = total * (percentual/100);
+    double salario = fixo + vendas;
+
+    System.out.printf("\nSalário ao final do mês: R$ %.2f %n", (salario));
+
+    System.out.println("\nFim do programa!");
+
+    scanner.close();
+    }
+}
+import java.util.Scanner; // Exercicio 8
+public class Atividade{
+  public static void main(String[] args){
+    System.out.println("Programa para o cálculo de carros e motos no estacionamento");
+      
+    Scanner scanner = new Scanner(System.in);
+  
+    System.out.println("\nInforme o número de veículos: ");
+    double veiculos = scanner.nextDouble();
+    
+    System.out.println("\nInforme o numero de rodas: ");
+    double rodas = scanner.nextDouble();
+
+    double valorUm = ((4* veiculos) - rodas)/2;
+    double valorDois = ((rodas - (valorUm * 2))/4);
+    
+    System.out.printf("\nTotal de motos: %.0f motos %n", (valorUm));
+
+    System.out.printf("\nTotal de carros: %.0f carros %n", (valorDois));
+
+    System.out.println("\nFim do programa!");
+
+    scanner.close();
+  }
+}
+import java.util.Scanner; // Atividade 9
+public class Atividade{
+  public static void main(String[] args){
+    System.out.println("Programa de conversão de segundos para horas e minutos");
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("\nInforme a quantidade de segundos que deseja converter: ");
+    double segundos = scanner.nextDouble();
+
+    double minutos = segundos / 60;
+    double horas = minutos / 60;
+
+    System.out.printf("\nQuantidade de segundos informados: %.0f segundos %n", (segundos));
+
+    System.out.printf("\nSegundos tranformados em minutos:%.0f minutos %n", (minutos));
+
+    System.out.printf("\nSegundos transformados em horas: %.0f horas %n", (horas));
+
+    System.out.println("\nFim do programa!");
+
+    scanner.close();
+  }
+}
+import java.util.Scanner; // Exercício 10
+public class Atividade{
+  public static void main(String[] arg){
+    System.out.println("Médias Aritimética, Harmônica e Geométrica");
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("\nInforme o primeiro número: ");
+    double numeroUm = scanner.nextDouble();
+
+    System.out.println("\nInforme o segundo número: ");
+    double numeroDois = scanner.nextDouble();
+
+    System.out.println("\nInforme o terceiro número: ");
+    double numeroTres = scanner.nextDouble();
+
+    double mediaUm = (numeroUm + numeroDois + numeroTres)/3;
+    double mediaDois = 3/((1/numeroUm) + (1/numeroDois) + (1/numeroTres));
+    double mediaTres = Math.cbrt(numeroUm * numeroDois * numeroTres);
+
+    System.out.printf("\nMédia Aritimética: %.2f %n", (mediaUm));
+    
+    System.out.printf("\nMédia Harmônica: %.2f %n", (mediaDois));
+
+    System.out.printf("\nMédia Geométrica: %.2f %n", (mediaTres));
+
+    System.out.println("\nFim do programa!");
+
+    scanner.close();
+  }
+}
